@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ url_for( 'static', filename='style.css', v=1)}}">
+    <title>Калькулятор</title>
+</head>
+<body>
+
+
+
+<div class=ex10><h1>Добро пожаловать на мой первый web project!</h1></div>
+
+
+<div class="hint"><h2>Расчёт заработной платы на месяц</h2></div>
+
+
+<div class="parent">
+    <div class="block">
+        <form action = "/calculate" method = "post">
+            <p>Введите месячный оклад.</p>
+            <input type="text" name="value_monthly_salary">
+            <p>Введите кол-во рабочих дней в месяце.</p>
+            <input type="text" name="working_days_month">
+            <p>Введите кол-во отработанных дней.</p>
+            <input type="text" name="days_worked">
+            <br>
+            <br>
+            <input type="submit" value="Посчитать">
+        </form>
+    </div>
+</div>
+
+
+<div class="value">
+    <p><strong>{{text_wrap}} <mark>{{dollars}}</mark></strong></p>
+</div>
+
+
+</body>
+</html>
